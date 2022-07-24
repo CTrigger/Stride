@@ -1,0 +1,17 @@
+[
+  {
+    "Id": 1,
+    "Name": "Dobok",
+    "Description": "Taekwondo clothes"
+  },
+  {
+    "Id": 2,
+    "Name": "Dogi",
+    "Description": "Karate clothes"
+  },
+  {
+    "Id": 3,
+    "Name": "Arhat",
+    "Description": "Kung fu clothes"
+  }
+]
