@@ -39,6 +39,9 @@ namespace ExampleAPI
 
             var productContext = services.GetRequiredService<ProductContext>();
             DataSeed.ProductSeed(productContext);
+
+            var userContext = services.GetRequiredService<UserContext>();
+            DataSeed.UserSeed(userContext);
         }
     }
 }

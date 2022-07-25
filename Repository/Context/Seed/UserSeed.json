@@ -1,0 +1,20 @@
+[
+  {
+    "Id": 1,
+    "Name": "Jack",
+    "LastName": "Sparrow",
+    "Email": "captain.jacksparrow@blackpearl.com"
+  },
+  {
+    "Id": 2,
+    "Name": "Sherlock",
+    "LastName": "Holmes",
+    "Email": "detective.wallbaker.st@holmes.com"
+  },
+  {
+    "Id": 3,
+    "Name": "Lorem",
+    "LastName": "Ipsum",
+    "Email": "lorem@ipsum.com"
+  }
+]

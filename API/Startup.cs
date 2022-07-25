@@ -42,8 +42,18 @@ namespace ExampleAPI
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
             });
 
-            #region Context
+            #region ProductContext
             services.AddDbContext<ProductContext>(option =>
+            {
+#if DEBUG
+                option.UseInMemoryDatabase("InMemoryDb");
+#else
+                option.UseSqlServer(Configuration.GetConnectionString("db"));
+#endif
+            });
+            #endregion
+            #region UserContext
+            services.AddDbContext<UserContext>(option =>
             {
 #if DEBUG
                 option.UseInMemoryDatabase("InMemoryDb");
@@ -61,7 +71,7 @@ namespace ExampleAPI
 
             #region Repositories
             services.AddScoped<IProductRepository, ProductRepository>();
-
+            services.AddScoped<IUserRepository, UserRepository>();
             #endregion
             #endregion
         }
@@ -70,6 +80,7 @@ namespace ExampleAPI
         public void Configure(
             IApplicationBuilder app, 
             IWebHostEnvironment env, 
+            UserContext userContext,
             ProductContext productContext)
         {
             if (env.IsDevelopment())
@@ -79,7 +90,9 @@ namespace ExampleAPI
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ExampleAPI v1"));
             }
 
-            productContext.Database.EnsureCreated();//Codefirst
+            //CodeFirst
+            productContext.Database.EnsureCreated();
+            userContext.Database.EnsureCreated();
 
             app.UseHttpsRedirection();
 

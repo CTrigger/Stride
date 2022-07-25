@@ -45,5 +45,17 @@ namespace Repository.Context.Seed
                 productcContext.SaveChanges();
             }
         }
+
+        public static void UserSeed(UserContext userContext)
+        {
+            if (!userContext.Users.Any())
+            {
+                string data = ReadInternalJson("UserSeed");
+                List<User> seed = JsonSerializer.Deserialize<List<User>>(data);
+
+                userContext.Users.AddRange(seed);
+                userContext.SaveChanges();
+            }
+        }
     }
 }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -23,10 +24,10 @@ namespace Model
         [MaxLength(30, ErrorMessage = Message.MaxLengthExceeded)]
         public string LastName { get { return _lastName; } set { _lastName = value; } }
 
-        public string FullName { get { return string.Concat(_name, " ", _lastName); } }
-
         [MaxLength(200, ErrorMessage = Message.MaxLengthExceeded)]
         public string Email { get; set; }
+        [NotMapped]
+        public string FullName { get { return string.Concat(_name, " ", _lastName); } }
 
     }
 }
