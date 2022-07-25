@@ -9,7 +9,7 @@ using System.IO;
 using System.Threading.Tasks;
 
 
-namespace ExampleAPI.Controllers
+namespace StrideAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
