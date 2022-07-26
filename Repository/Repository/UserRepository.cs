@@ -24,7 +24,7 @@ namespace Repository
         #endregion
 
         #region Methods
-        public async Task<User> GetById(int id)
+        public async Task<User> GetById(Guid id)
         {
             return await _userContext.Users.FindAsync(id);
         }

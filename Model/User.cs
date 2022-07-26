@@ -16,7 +16,7 @@ namespace Model
         #endregion
 
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         [MaxLength(30,ErrorMessage = Message.MaxLengthExceeded)]
         public string Name { get { return _name; } set { _name = value; } }
