@@ -9,6 +9,10 @@ For Recruiters: The purpose of this repository is to avoid useless technical tes
 I'll not accept contributions once this is for my portfolio as mentioned above.
 But I'll gratefully accept suggestions and problems pointing... so feel free to contact me.
 
+## Planning board
+https://trello.com/b/qy30fe9M/stride
+
+
 ## Structure
 The main compositions is divided in 3 items
 
