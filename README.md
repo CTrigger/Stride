@@ -21,7 +21,7 @@ The main compositions is divided in 3 items
 	* Razor + MVC Project
 	* Blazor + MVC Project
 	* Vanilla Project
-	* Mobile Project (Xamarin or MAIU)
+	* Mobile Project (Xamarin or MAUI)
 	
 2. Middleware projects
 	* Restful API
