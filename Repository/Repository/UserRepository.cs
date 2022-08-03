@@ -77,7 +77,7 @@ namespace Repository
             }
         }
 
-        public async Task<int> Delete(int id)
+        public async Task<int> Delete(Guid id)
         {
             User delete = await _userContext.Users.FindAsync(id);
             if (delete == null)

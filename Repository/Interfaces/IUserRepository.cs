@@ -9,7 +9,7 @@ namespace Repository.Interfaces
         public Task<User> GetById(Guid id);
         public Task<int> Insert(User user);
         public Task<int> Update(User user);
-        public Task<int> Delete(int id);
+        public Task<int> Delete(Guid id);
 
 
     }
