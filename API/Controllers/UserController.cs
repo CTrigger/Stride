@@ -6,6 +6,7 @@ using Repository.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace StrideAPI.Controllers
@@ -44,8 +45,8 @@ namespace StrideAPI.Controllers
 
         #region Put
         /*Update all form*/
-        [HttpPut]
-        public async Task<IActionResult> Put(Guid id, User user)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(Guid id, [FromBody]User user)
         {
             user.Id = id;
             return Ok(await _userRepository.Update(user));
@@ -55,9 +56,9 @@ namespace StrideAPI.Controllers
         #region Patch
         /*Password reset*/
         [HttpPatch]
-        public async Task<IActionResult> Patch(string email, string password)
+        public async Task<IActionResult> Patch([FromForm]string email,[FromForm] string password)
         {
-            throw new NotImplementedException();
+            return Ok(await _userRepository.UpdatePassword(email, password));
         }
         #endregion
 

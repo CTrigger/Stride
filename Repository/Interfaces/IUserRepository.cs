@@ -10,6 +10,7 @@ namespace Repository.Interfaces
         public Task<int> Insert(User user);
         public Task<int> Update(User user);
         public Task<int> Delete(Guid id);
+        public Task<int> UpdatePassword(string email, string password);
 
 
     }

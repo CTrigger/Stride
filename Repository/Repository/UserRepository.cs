@@ -2,9 +2,9 @@
 using Model.Enum;
 using Repository.Context;
 using Repository.Interfaces;
+using System.Linq;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -106,7 +106,23 @@ namespace Repository
             }
         }
 
+        public async Task<int> UpdatePassword(string email, string password)
+        {
+            
+            User user = (from u in _userContext.Users
+                       where u.Email == email
+                       select u).FirstOrDefault();
+            if (user == null)
+            {
+                return (int)ProcessStatus.NotFound;
+            }
+            else
+            {
+                user.Password = password;
+                return await _userContext.SaveChangesAsync();
+            }
 
+        }
         #endregion
 
 

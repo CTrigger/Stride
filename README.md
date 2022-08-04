@@ -2,11 +2,11 @@
 This Project will be a full compilation of all knowledge which I have for my portfolio.
 
 ## Use
-For Developers: Feel free to use part or the complete project as you needs.
+For Developers: Feel free to use part or the complete project as you needs.<br />
 For Recruiters: The purpose of this repository is to avoid useless technical tests.
 
 ## Contributing
-I'll not accept contributions once this is for my portfolio as mentioned above.
+I'll not accept contributions once this is for my portfolio as mentioned above. <br />
 But I'll gratefully accept suggestions and problems pointing... so feel free to contact me.
 
 ## Planning board
@@ -21,7 +21,7 @@ The main compositions is divided in 3 items
 	* Razor + MVC Project
 	* Blazor + MVC Project
 	* Vanilla Project
-	* Mobile Project (Xamarin or MAUI)
+	* (Not defined) Mobile Project (Xamarin or MAUI or React)
 	
 2. Middleware projects
 	* Restful API
