@@ -20,7 +20,7 @@ The main compositions is divided in 3 items
 	* Angular project
 	* Razor + MVC Project
 	* Blazor + MVC Project
-	* Vanilla Project
+	* Vanilla Project (Pure HTMl, Pure JS, Pure CSS)
 	* (Not defined) Mobile Project (Xamarin or MAUI or React)
 	
 2. Middleware projects
