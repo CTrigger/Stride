@@ -29,50 +29,53 @@ namespace Repository
             return await _userContext.Users.FindAsync(id);
         }
 
-        public async Task<int> Insert(User user)
+        public async Task<User> Insert(User user)
         {
             try
             {
                 await _userContext.Users.AddAsync(user);
                 if (await _userContext.SaveChangesAsync() > 0)
                 {
-                    return (int)ProcessStatus.Success;
+                    return user;
                 }
                 else
                 {
-                    return (int)ProcessStatus.Failed;
+                    throw new Exception("Cannot add user");
                 }
             }
             catch (Exception e)
             {
-                return (int)ProcessStatus.Exception;
+                throw e;
             }
         }
 
-        public async Task<int> Update(User user)
+        public async Task<User> Update(User user)
         {
             User update = await _userContext.Users.FindAsync(user.Id);
             if (update == null)
             {
-                return (int)ProcessStatus.NotFound;
+                throw new Exception("Not Found");
             }
             else
             {
                 update.Email = user.Email;
+                update.Name = user.Name;
+                update.LastName = user.LastName;
+                update.Password = user.Password;
                 try
                 {
                     if (await _userContext.SaveChangesAsync() > 0)
                     {
-                        return (int)ProcessStatus.Success;
+                        return update;
                     }
                     else
                     {
-                        return (int)ProcessStatus.Failed;
+                        throw new Exception("Register unchanged");
                     }
                 }
                 catch (Exception e)
                 {
-                    return (int)ProcessStatus.Exception;
+                    throw e;
                 }
             }
         }
@@ -106,7 +109,7 @@ namespace Repository
             }
         }
 
-        public async Task<int> UpdatePassword(string email, string password)
+        public async Task<User> UpdatePassword(string email, string password)
         {
             
             User user = (from u in _userContext.Users
@@ -114,12 +117,20 @@ namespace Repository
                        select u).FirstOrDefault();
             if (user == null)
             {
-                return (int)ProcessStatus.NotFound;
+                throw new Exception("Not found");
             }
             else
             {
                 user.Password = password;
-                return await _userContext.SaveChangesAsync();
+                if (await _userContext.SaveChangesAsync() > 0)
+                {
+                    return user;
+
+                }
+                else
+                {
+                    throw new Exception("Register unchanged");
+                }
             }
 
         }

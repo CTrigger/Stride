@@ -26,8 +26,10 @@ namespace Model
 
         [MaxLength(200, ErrorMessage = Message.MaxLengthExceeded)]
         public string Email { get; set; }
-        //[NotMapped]
+
+        [NotMapped]
         public string Password { get; set; }
+
         [NotMapped]
         public string FullName { get { return string.Concat(_name, " ", _lastName); } }
 

@@ -7,10 +7,10 @@ namespace Repository.Interfaces
     public interface IUserRepository
     {
         public Task<User> GetById(Guid id);
-        public Task<int> Insert(User user);
-        public Task<int> Update(User user);
+        public Task<User> Insert(User user);
+        public Task<User> Update(User user);
         public Task<int> Delete(Guid id);
-        public Task<int> UpdatePassword(string email, string password);
+        public Task<User> UpdatePassword(string email, string password);
 
 
     }
