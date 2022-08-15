@@ -17,11 +17,11 @@ https://trello.com/b/qy30fe9M/stride
 The main compositions is divided in 3 items
 
 1. Frontend projects
-	* Angular project
+	* Angular project (to study)
 	* Razor + MVC Project
-	* Blazor + MVC Project
+	* Blazor + MVC Project (to study)
 	* Vanilla Project (Pure HTMl, Pure JS, Pure CSS)
-	* (Not defined) Mobile Project (Xamarin or MAUI or React)
+	* (Not defined) Mobile Project (Xamarin or MAUI or React) (to study)
 	
 2. Middleware projects
 	* Restful API
