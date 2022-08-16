@@ -13,7 +13,7 @@ namespace Model
     public record Midia
     {
         [Key]
-        public int Id { get; set; }
+        public uint Id { get; set; }
 
         [MaxLength(300, ErrorMessage = Message.MaxLengthExceeded)]
         public string Path { get; set; }

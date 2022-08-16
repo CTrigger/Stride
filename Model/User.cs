@@ -1,4 +1,5 @@
-﻿using Model.InternalMessage;
+﻿using Microsoft.AspNetCore.Http;
+using Model.InternalMessage;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -38,6 +39,8 @@ namespace Model
 
         [NotMapped]
         public string FullName { get { return string.Concat(_firstName, " ", _lastName); } }
-
+        
+        [NotMapped]
+        public IFormFile File { get; set; }
     }
 }

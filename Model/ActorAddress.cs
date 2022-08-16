@@ -8,7 +8,7 @@ namespace Model
 {
     public record ActorAddress
     {
-        public int Id { get; set; }
+        public uint Id { get; set; }
         public Guid ActorId { get; set; }
     }
 }

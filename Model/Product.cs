@@ -12,9 +12,13 @@ namespace Model
     public record Product
     {
         [Key]
-        public int Id { get; set; }
+        public uint Id { get; set; }
+
+        public uint ProductAttributesId { get; set; }
+
         [MaxLength(100,ErrorMessage = Message.MaxLengthExceeded)]
         public string Name { get; set; }
+
         [MaxLength(200,ErrorMessage = Message.MaxLengthExceeded)]
         public string Description { get; set; }
 
