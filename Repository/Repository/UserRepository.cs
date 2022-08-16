@@ -24,7 +24,7 @@ namespace Repository
         #endregion
 
         #region Methods
-        public async Task<User> GetById(Guid id)
+        public async Task<User> GetById(uint id)
         {
             return await _userContext.Users.FindAsync(id);
         }
@@ -58,8 +58,8 @@ namespace Repository
             }
             else
             {
-                update.Email = user.Email;
-                update.Name = user.Name;
+                update.Login = user.Login;
+                update.FirstName = user.FirstName;
                 update.LastName = user.LastName;
                 update.Password = user.Password;
                 try
@@ -80,7 +80,7 @@ namespace Repository
             }
         }
 
-        public async Task<int> Delete(Guid id)
+        public async Task<int> Delete(uint id)
         {
             User delete = await _userContext.Users.FindAsync(id);
             if (delete == null)
@@ -113,7 +113,7 @@ namespace Repository
         {
             
             User user = (from u in _userContext.Users
-                       where u.Email == email
+                       where u.Login == email
                        select u).FirstOrDefault();
             if (user == null)
             {

@@ -1,7 +1,8 @@
 [
   {
-    "AccessId": "1",
-    "ContactDataId": null,
+    "Id": 1,
+    "AccessId": 1,
+    "ContactDataId": 0,
     "ActorAddressId": "3f2a3dba-b8e8-4c96-a594-c2061ca49a73",
     "FirstName": "Jack",
     "LastName": "Sparrow",
@@ -9,8 +10,9 @@
     "Password": "blackpearl"
   },
   {
-    "AccessId": "1",
-    "ContactDataId": null,
+    "Id": 2,
+    "AccessId": 1,
+    "ContactDataId": 0,
     "ActorAddressId": "845e4e10-1ee9-4067-bfe1-008ab434c358",
     "FirstName": "Sherlock",
     "LastName": "Holmes",
@@ -18,8 +20,9 @@
     "Password": "BakerStreet"
   },
   {
-    "AccessId": "1",
-    "ContactDataId": null,
+    "Id": 3,
+    "AccessId": 1,
+    "ContactDataId": 0,
     "ActorAddressId": "4e7fdc8c-7483-4896-ba51-a236e835585c",
     "FirstName": "Lorem",
     "LastName": "Ipsum",

@@ -28,7 +28,7 @@ namespace StrideAPI.Controllers
 
         #region Get
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(Guid id)
+        public async Task<IActionResult> Get(uint id)
         {
             return Ok(await _userRepository.GetById(id));
         }
@@ -46,7 +46,7 @@ namespace StrideAPI.Controllers
         #region Put
         /*Update all form*/
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(Guid id, [FromForm]User user)
+        public async Task<IActionResult> Put(uint id, [FromForm]User user)
         {
             user.Id = id;
             return Ok(await _userRepository.Update(user));
@@ -64,7 +64,7 @@ namespace StrideAPI.Controllers
 
         #region Delete
         [HttpDelete]
-        public async Task<IActionResult> Delete([FromForm]Guid id)
+        public async Task<IActionResult> Delete([FromForm]uint id)
         {
             return Ok(await _userRepository.Delete(id));
         }

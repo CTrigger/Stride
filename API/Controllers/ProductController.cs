@@ -75,7 +75,7 @@ namespace StrideAPI.Controllers
 
         #region Put
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] Product product)
+        public async Task<IActionResult> Put(uint id, [FromBody] Product product)
         {
 
             product.Id = id;
