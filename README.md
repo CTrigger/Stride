@@ -25,7 +25,7 @@ The main compositions is divided in 3 items
 	
 2. Middleware projects
 	* Restful API
-	* SOAP message
+	* SOAP message (to study)
 	
 3. Backend project
 	* .NET 5.0 or superior
