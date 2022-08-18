@@ -12,6 +12,12 @@ But I'll gratefully accept suggestions and problems pointing... so feel free to 
 ## Planning board
 https://trello.com/b/qy30fe9M/stride
 
+## Documentation
+Diagrams and Details <br />
+To open the diagrams files open in: http://draw.io
+
+### Diagrams
+https://github.com/CTrigger/Stride/tree/main/Documentation
 
 ## Structure
 The main compositions is divided in 3 items
