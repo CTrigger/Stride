@@ -1,0 +1,32 @@
+[
+  {
+    "Id": 0,
+    "ContactDataId": 0,
+    "Info": "stride_master@stride.com"
+  },
+  {
+    "Id": 1,
+    "ContactDataId": 0,
+    "Info": "stride_master2@stride.com"
+  },
+  {
+    "Id": 2,
+    "ContactDataId": 1,
+    "Info": "+351 222 333 444"
+  },
+  {
+    "Id": 3,
+    "ContactDataId": 2,
+    "Info": "storelittledragon@dragon.com"
+  },
+  {
+    "Id": 4,
+    "ContactDataId": 3,
+    "Info": "+351 999 888 777"
+  },
+  {
+    "Id": 5,
+    "ContactDataId": 4,
+    "Info": "bruce@lee.com"
+  }
+]

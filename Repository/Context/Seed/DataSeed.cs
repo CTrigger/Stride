@@ -13,10 +13,9 @@ namespace Repository.Context.Seed
     public class DataSeed
     {
         #region variables
-        private const string SeedPath = @"..\Repository\Context\Seed\";
+        private const string SeedPath = @"..\Repository\Context\Seed\Data\";
 
         #endregion
-
 
         #region Aux Methods
         public static string ReadInternalJson(string fileName)
@@ -34,17 +33,17 @@ namespace Repository.Context.Seed
         }
         #endregion
 
-        public static void ProductSeed(ProductContext productcContext)
-        {
-            if (!productcContext.Products.Any())
-            {
-                string data = ReadInternalJson("ProductSeed");
-                List<Product> seed = JsonSerializer.Deserialize<List<Product>>(data);
+        //public static void ProductSeed(ProductContext productcContext)
+        //{
+        //    if (!productcContext.Products.Any())
+        //    {
+        //        string data = ReadInternalJson("ProductSeed");
+        //        List<Product> seed = JsonSerializer.Deserialize<List<Product>>(data);
                 
-                productcContext.Products.AddRange(seed);
-                productcContext.SaveChanges();
-            }
-        }
+        //        productcContext.Products.AddRange(seed);
+        //        productcContext.SaveChanges();
+        //    }
+        //}
 
         public static void UserSeed(UserContext userContext)
         {

@@ -1,0 +1,26 @@
+[
+  {
+    "AccessId": 500,
+    "ActorId": 0,
+    "FirstName": "Stride",
+    "LastName": "Master",
+    "Login": "StrideAdmin",
+    "Password": "admin123"
+  },
+  {
+    "AccessId": 2500,
+    "ActorId": 1,
+    "FirstName": "Little Dragon",
+    "LastName": "Master",
+    "Login": "LittleDragon",
+    "Password": "warehouseadmin123"
+  },
+  {
+    "AccessId": 1000,
+    "ActorId": 2,
+    "FirstName": "Bruce",
+    "LastName": "Lee",
+    "Login": "Bruce",
+    "Password": "stride123"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "Id": 0,
+    "IdKey": "C15B1384-F4DD-4B3E-810A-4EDC9632AE05",
+    "ContactType": 2
+  },
+  {
+    "Id": 1,
+    "IdKey": "C15B1384-F4DD-4B3E-810A-4EDC9632AE05",
+    "ContactType": 3
+  },
+  {
+    "Id": 2,
+    "IdKey": "193F4F7A-B565-41C0-9A25-2DF55FB018D9",
+    "ContactType": 2
+  },
+  {
+    "Id": 3,
+    "IdKey": "193F4F7A-B565-41C0-9A25-2DF55FB018D9",
+    "ContactType": 4
+  },
+  {
+    "Id": 4,
+    "IdKey": "59A57AE4-1AFF-4816-A993-6A7D4C339182",
+    "ContactType": 2
+  }
+]

@@ -37,8 +37,8 @@ namespace ExampleAPI
             using var scope = host.Services.CreateScope();
             var services = scope.ServiceProvider;
 
-            var productContext = services.GetRequiredService<ProductContext>();
-            DataSeed.ProductSeed(productContext);
+            //var productContext = services.GetRequiredService<ProductContext>();
+            //DataSeed.ProductSeed(productContext);
 
             var userContext = services.GetRequiredService<UserContext>();
             DataSeed.UserSeed(userContext);

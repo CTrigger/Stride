@@ -21,9 +21,7 @@ namespace Model
 
         public uint AccessId { get; set; }
 
-        public uint ContactDataId { get; set; }
-
-        public Guid ActorAddressId { get; set; }
+        public uint ActorId { get; set; }
 
         [MaxLength(30,ErrorMessage = Message.MaxLengthExceeded)]
         public string FirstName { get { return _firstName; } set { _firstName = value; } }
@@ -34,6 +32,8 @@ namespace Model
         [MaxLength(200, ErrorMessage = Message.MaxLengthExceeded)]
         public string Login { get; set; }
 
+
+        #region NotMapped
         [NotMapped]
         public string Password { get; set; }
 
@@ -42,5 +42,7 @@ namespace Model
         
         [NotMapped]
         public IFormFile File { get; set; }
+        #endregion
     }
+
 }

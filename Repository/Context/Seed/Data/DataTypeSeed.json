@@ -1,0 +1,22 @@
+[
+  {
+    "Id": 0,
+    "Name": "Fiscal Address"
+  },
+  {
+    "Id": 1,
+    "Name": "Delivery Address"
+  },
+  {
+    "Id": 2,
+    "Name": "E-mail"
+  },
+  {
+    "Id": 3,
+    "Name": "Phone"
+  },
+  {
+    "Id": 4,
+    "Name": "Mobile"
+  }
+]
